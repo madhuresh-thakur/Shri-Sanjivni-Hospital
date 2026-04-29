@@ -31,4 +31,20 @@ A high-end, professional medical clinic management and patient booking platform 
 1. `npm install`
 2. `npm run dev`
 
+## 🌍 Deployment Checklist (Clearing the "Blank Screen")
+
+### For Netlify:
+- **Build Settings**:
+  - **Build Command**: `npm run build`
+  - **Publish Directory**: `dist`
+- **Routing**: Ensure the `public/_redirects` file is present (already included in this project).
+- **Environment**: If your build is blank, check the "Base directory" in Netlify settings. It should be the root.
+
+### For GitHub Pages:
+1. Go to your Repository **Settings** > **Pages**.
+2. Under **Build and deployment**, change **Source** to **GitHub Actions**.
+3. Push your code to the `main` branch.
+4. Wait for the "Deploy to GitHub Pages" action to complete in the **Actions** tab.
+5. Your site will be at `https://madhuresh-thakur.github.io/Shri-Sanjivni-Hospital/`.
+
 Designed for clinics that prioritize medical excellence and digital efficiency.

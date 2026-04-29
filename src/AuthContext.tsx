@@ -26,7 +26,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   return (
     <AuthContext.Provider value={{ user, loading }}>
-      {!loading && children}
+      {loading ? (
+        <div className="h-screen w-screen flex flex-col items-center justify-center bg-medical-navy text-white">
+          <div className="w-16 h-16 border-4 border-accent border-t-transparent rounded-full animate-spin mb-6" />
+          <p className="font-bold tracking-widest uppercase text-xs animate-pulse text-white/50">Synchronizing Medical Records...</p>
+        </div>
+      ) : children}
     </AuthContext.Provider>
   );
 };
